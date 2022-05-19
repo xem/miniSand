@@ -1,13 +1,14 @@
 <tt>
 <h2>Mini Sand</h2>
 
-<p>A 2D sand simulator in 425 bytes.
+<p>A 2D sand simulator in 424 bytes.
 <br>Use mouse to drop more sand.
 
 <pre style="background:#222;color:#fff;padding:10px;word-wrap:break-word;white-space:pre;width:800px;position:relative;font-size:12px">
-&lt;canvas id=a>&lt;script>d=[f=c=a.getContext`2d`],r=Math.random,setInterval((()=>{for(a.width^=0,i=150;i--;)
-for(d[i]||=[],j=300;j--;)f&&(d[i][j]=r()<.2),i<149&&d[i][j]&&(o=2,d[i+1][j]?d[i+1][j-1]&&!d[i+1][j+1]?o=1:d[i+
-1][j+1]&&!d[i+1][j-1]?o=-1:d[i+1][j+1]||d[i+1][j-1]||(o=r()<.5?1:-1):o=0,o<2?(d[i+1][j+o]=1,c.fillRect(j+o,i+1
-,1,1),d[i][j]=0):c.fillRect(j,i,1,1));f=0,d[E.pageY-8][E.pageX-8]=1}),16),onmousemove=i=>E=i&lt;/script></pre>
+&lt;canvas id=a>&lt;script>d=[f=c=a.getContext`2d`],setInterval((e=>{for(a.width^=0,i=150;i--;)
+for(d[i]||=[],j=300;j--;)f&&(d[i][j]=(r=Math.random)()&lt;.2),i&lt;149&&d[i][j]&&(o=2,n=[d[i+1][j-1],
+d[i+1][j],d[i+1][j+1]],n[1]?n[0]&&!n[2]?o=1:n[2]&&!n[0]?o=-1:n[0]||n[2]||(o=r()&lt;.5?1:-1):o=0,o&lt;
+2?(d[i+1][j+o]=1,c.fillRect(j+o,i+1,1,1),d[i][j]=0):c.fillRect(j,i,1,1));f=0,d[E.pageY-8][E.
+pageX-8]=1}),16),onmousemove=i=>E=i&lt;/script></pre>
 
 <iframe frameborder="0" scrolling="no" src="index.min.html" style="border:1px solid;width:316px;height:166px;transform:scale(3);transform-origin:top left">
